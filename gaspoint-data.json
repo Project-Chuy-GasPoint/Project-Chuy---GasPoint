@@ -1,0 +1,35 @@
+[
+    {
+        "title": "Petron Gasul Distributor",
+        "description": "Authorized LPG distributor in the town proper.",
+        "lat": 8.36090,
+        "lng": 124.86420,
+        "img": "",
+        "locationType": "Refill Station"
+    },
+    {
+        "title": "Shell LPG Dealer",
+        "description": "Offers Shellane tanks and refills.",
+        "lat": 8.37010,
+        "lng": 124.87110,
+        "img": "",
+        "locationType": "Dealer"
+    },
+    {
+        "title": "Local LPG Store",
+        "description": "Affordable cooking gas for households.",
+        "lat": 8.35480,
+        "lng": 124.87600,
+        "img": "",
+        "locationType": "Store"
+    },
+    {
+        "title": "Desmark Manolo Fortich - LPG Section",
+        "locationType": "Cooking Gas",
+        "description": "Sells household Petron Gasul cylinders under the Desmark appliance center.",
+        "lat": 8.369782,
+        "lng": 124.864501,
+        "img": ""
+    }
+    
+]
