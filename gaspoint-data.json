@@ -94,15 +94,18 @@
    "description": "Damilag WOWO Store Gasul Reseller",
    "lat": 8.370294886090429,   
    "lng": 124.81142444489755
-<<<<<<< HEAD
 },
 {
   "title":"RJS LPG CENTER",
    "description": "Next to Minute Burger",
    "lat": 8.367524194863853 ,   
    "lng": 124.86481732024001
-=======
->>>>>>> babd7ee6bac9654a935232ef5fb141c25df28456
+},
+{
+"title":"Sanchez Store",
+   "description": "Alae Centro",
+   "lat": 8.42375065323226 ,   
+   "lng": 124.81341424879218
 }
 
 ]
