@@ -55,6 +55,7 @@
 },
 {
   "title":"JACUTIN LPG STORE",
+  "image": "images/JACUTIN LPG.png",
    "description": "Damilag JACUTIN LPG STORE",
    "lat": 8.351871795692452, 
    "lng": 124.81327351467345
@@ -79,6 +80,7 @@
 },
 {
   "title":"WOWO Store",
+  "image": "images/WOWO.png",
    "description": "Damilag WOWO Store Gasul Reseller",
    "lat": 8.370294886090429,   
    "lng": 124.81142444489755
