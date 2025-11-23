@@ -1,117 +1,116 @@
 [
-  {
-"title":"PRYCEGAS",
-"description": "Damilag PryceGas",
-"image": "images/PRYCE GAS DAMILAG.png",
-  "lat": 8.3606043,
-  "lng": 124.8122304
-  },
    {
-"title":"Prycegas Myras Store",
-"image": "images/MIRAS.png",
-"description": "Damilag PryceGas",
-  "lat": 8.361967,
-  "lng": 124.8122251
+      "title": "PRYCEGAS",
+      "description": "Damilag PryceGas",
+      "image": "images/PRYCE GAS DAMILAG.png",
+      "lat": 8.3606043,
+      "lng": 124.8122304
    },
-      {
-"title":"Prycegas Aldin store",
-"image": "images/Aldin lpg.png",
-"description": "Delivery",
-"contact": "09759735056",
-  "lat": 8.3631392,
-  "lng": 124.8122548
+   {
+      "title": "Prycegas Myras Store",
+      "image": "images/MIRAS.png",
+      "description": "Damilag PryceGas",
+      "lat": 8.361967,
+      "lng": 124.8122251
    },
-{
-    "title":"Krominch Trading Store",
-    "image": "images/Krominch.png",
-   "description": "Alae PryceGas Reseller Store",
-   "lat": 8.420712468030786,
-   "lng": 124.81331325450262
-},
-{
-  "title":"Phoenix Super Lpg",
-  "image": "images/Phoenix LPG.png",
-   "description": "Manolo Phoenix Super Lpg",
-   "lat": 8.36807,
-   "lng": 124.86506
-}, 
-{
-  "title":"KRIS LPG STATION",
-  "image": "images/KRIS LPG.png",
-   "description": "Manolo KRIS LPG STATION",
-   "lat": 8.36815,
-   "lng": 124.86510
-},
-{
-  "title":"Phoenix Super Lpg",
-  "image": "images/PHOENIX.png",
-   "description": "Damilag Phoenix Super Lpg",
-   "lat": 8.36331, 
-   "lng": 124.81246
-},
-{
-  "title":"GD LPG TRADING",
-   "description": "Damilag GD LPG TRADING",
-   "image": "images/GD LPG.png",
-   "lat": 8.35114543979135, 
-   "lng": 124.81323553498797
-},
-{
-  "title":"JACUTIN LPG STORE",
-  "image": "images/JACUTIN LPG.png",
-   "description": "Damilag JACUTIN LPG STORE",
-   "lat": 8.351871795692452, 
-   "lng": 124.81327351467345
-},
-{
-  "title":"Petron Gasul",
-  "image": "images/PetronGasulManolo.png",
-   "description": "Manolo Petron Gasul",
-   "lat": 8.36825430608832,  
-   "lng": 124.86086502665896
-},
-{
-  "title":"Petron Gasul",
-  "image": "images/Petron Gasul Alae.png",
-   "description": "Alae Petron Gasul",
-   "lat": 8.42041285220418,  
-   "lng": 124.81328499910488
-},
-{
-  "title":"Salvana's Store",
-  "image": "images/Salvanas Store.png",
-   "description": "Alae Salvana's Store Gasul Reseller",
-   "lat": 8.420920517746413,   
-   "lng": 124.8123726334196
-},
-{
-  "title":"WOWO Store",
-  "image": "images/WOWO.png",
-   "description": "Damilag WOWO Store Gasul Reseller",
-   "lat": 8.370294886090429,   
-   "lng": 124.81142444489755
-},
-{
-  "title":"RJS LPG CENTER",
-  "image": "images/RJS.png",
-   "description": "Next to Minute Burger",
-   "lat": 8.367524194863853 ,   
-   "lng": 124.86481732024001
-},
-{
-"title":"Sanchez Store",
-"image": "images/Sanchez.png",
-   "description": "Alae Centro",
-   "lat": 8.42375065323226 ,   
-   "lng": 124.81341424879218
-},
-{
-"title":"IJK-M LPG CENTER",
-"image": "images/IJK.png",
-   "description": "We Deliver Door to Kusina",
-   "contact": "09177044331" ,
-   "lat": 8.423445208244992 ,   
-   "lng": 124.8139231742251
-}
-
+   {
+      "title": "Prycegas Aldin store",
+      "image": "images/Aldin lpg.png",
+      "description": "Delivery",
+      "contact": "09759735056",
+      "lat": 8.3631392,
+      "lng": 124.8122548
+   },
+   {
+      "title": "Krominch Trading Store",
+      "image": "images/Krominch.png",
+      "description": "Alae PryceGas Reseller Store",
+      "lat": 8.420712468030786,
+      "lng": 124.81331325450262
+   },
+   {
+      "title": "Phoenix Super Lpg",
+      "image": "images/Phoenix LPG.png",
+      "description": "Manolo Phoenix Super Lpg",
+      "lat": 8.36807,
+      "lng": 124.86506
+   },
+   {
+      "title": "KRIS LPG STATION",
+      "image": "images/KRIS LPG.png",
+      "description": "Manolo KRIS LPG STATION",
+      "lat": 8.36815,
+      "lng": 124.86510
+   },
+   {
+      "title": "Phoenix Super Lpg",
+      "image": "images/PHOENIX.png",
+      "description": "Damilag Phoenix Super Lpg",
+      "lat": 8.36331,
+      "lng": 124.81246
+   },
+   {
+      "title": "GD LPG TRADING",
+      "description": "Damilag GD LPG TRADING",
+      "image": "images/GD LPG.png",
+      "lat": 8.35114543979135,
+      "lng": 124.81323553498797
+   },
+   {
+      "title": "JACUTIN LPG STORE",
+      "image": "images/JACUTIN LPG.png",
+      "description": "Damilag JACUTIN LPG STORE",
+      "lat": 8.351871795692452,
+      "lng": 124.81327351467345
+   },
+   {
+      "title": "Petron Gasul",
+      "image": "images/PetronGasulManolo.png",
+      "description": "Manolo Petron Gasul",
+      "lat": 8.36825430608832,
+      "lng": 124.86086502665896
+   },
+   {
+      "title": "Petron Gasul",
+      "image": "images/Petron Gasul Alae.png",
+      "description": "Alae Petron Gasul",
+      "lat": 8.42041285220418,
+      "lng": 124.81328499910488
+   },
+   {
+      "title": "Salvana's Store",
+      "image": "images/Salvanas Store.png",
+      "description": "Alae Salvana's Store Gasul Reseller",
+      "lat": 8.420920517746413,
+      "lng": 124.8123726334196
+   },
+   {
+      "title": "WOWO Store",
+      "image": "images/WOWO.png",
+      "description": "Damilag WOWO Store Gasul Reseller",
+      "lat": 8.370294886090429,
+      "lng": 124.81142444489755
+   },
+   {
+      "title": "RJS LPG CENTER",
+      "image": "images/RJS.png",
+      "description": "Next to Minute Burger",
+      "lat": 8.367524194863853,
+      "lng": 124.86481732024001
+   },
+   {
+      "title": "Sanchez Store",
+      "image": "images/Sanchez.png",
+      "description": "Alae Centro",
+      "lat": 8.42375065323226,
+      "lng": 124.81341424879218
+   },
+   {
+      "title": "IJK-M LPG CENTER",
+      "image": "images/IJK.png",
+      "description": "We Deliver Door to Kusina",
+      "contact": "09177044331",
+      "lat": 8.423445208244992,
+      "lng": 124.8139231742251
+   }
 ]
