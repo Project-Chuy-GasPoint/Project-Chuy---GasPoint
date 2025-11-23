@@ -84,6 +84,15 @@
    "lng": 124.89232296190339
 },
 {
-  
+  "title":"Salvana's Store",
+   "description": "Alae Salvana's Store Gasul Reseller",
+   "lat": 8.420920517746413,   
+   "lng": 124.8123726334196
+},
+{
+  "title":"WOWO Store",
+   "description": "Damilag WOWO Store Gasul Reseller",
+   "lat": 8.370294886090429,   
+   "lng": 124.81142444489755
 }
 ]
