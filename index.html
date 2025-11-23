@@ -1,122 +1,54 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>GasPoint - Manolo Fortich LPG Locator</title>
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GasPoint - Cooking Gas Locator</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
-
 <body>
 
-<div id="searchBox">
-    <input type="text" id="locationInput" placeholder="Search barangay / place…">
-    <button onclick="searchLocation()">Search Near Gas Cooking</button>
+<div>
+  <input id="locationSearch" placeholder="Enter barangay (damilag, alae, manolo)">
+  <button onclick="searchLocation()">Search</button>
 </div>
 
-<div id="map" style="height:100vh; width:100vw;"></div>
+<div id="map"></div>
 
 <script>
+document.getElementById("map").style.height = window.innerHeight + "px";
 
-const streetMap = L.tileLayer(
-    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-    { attribution: "© OpenStreetMap" }
-);
+const street = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { attribution: "" });
+const satellite = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", { attribution: "" });
 
+const map = L.map("map", { center: [8.3646, 124.8651], zoom: 13, layers: [street] });
+L.control.layers({ "Street": street, "Satellite": satellite }).addTo(map);
 
-const satellite = L.tileLayer(
-    "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-    { attribution: "© Esri, Maxar, Earthstar Geographics" }
-);
-
-
-const map = L.map("map", {
-    center: [8.365, 124.865],
-    zoom: 13,
-    layers: [streetMap]
-});
-
-
-L.control.layers(
-    { "Street Map": streetMap, "Satellite": satellite },
-    {},
-    { collapsed: false }
-).addTo(map);
-
-let storeData = [];
-
+let gasStores = [];
 
 fetch("gaspoint-data.json")
-    .then(r => r.json())
-    .then(data => {
-        storeData = data;
-        addGasMarkers(data);
+  .then(r => r.json())
+  .then(data => {
+    gasStores = data;
+    gasStores.forEach(store => {
+      L.marker([store.lat, store.lng])
+        .addTo(map)
+        .bindPopup("<b>" + store.title + "</b><br>" + store.description);
     });
-
-
-function addGasMarkers(data) {
-    const bounds = [];
-
-    data.forEach(s => {
-        const m = L.marker([s.lat, s.lng]).addTo(map);
-
-        m.bindPopup(`<b>${s.title}</b><br>${s.description}`);
-
-        bounds.push([s.lat, s.lng]);
-    });
-
-    map.fitBounds(bounds, { padding: [40,40] });
-}
-
+  });
 
 const knownLocations = {
-    "tankulan": [8.3695, 124.8644],
-    "dalirig": [8.4012, 124.8520],
-    "alae": [8.3729, 124.7511],
-    "agusan canyon": [8.3189, 124.8165],
-    "damilag": [8.3557, 124.8379],
-    "kalugmanan": [8.3879, 124.8486]
+  "damilag": [8.3503, 124.8121],
+  "alae": [8.4208119, 124.8133793],
+  "manolo": [8.3646, 124.8651]
 };
 
-
-function nearestStore(lat, lng) {
-    let nearest = null;
-    let minDist = Infinity;
-
-    storeData.forEach(s => {
-        const d = Math.sqrt(
-            Math.pow(s.lat - lat, 2) +
-            Math.pow(s.lng - lng, 2)
-        );
-        if (d < minDist) {
-            minDist = d;
-            nearest = s;
-        }
-    });
-
-    return nearest;
-}
-
-
 function searchLocation() {
-    const input = document.getElementById("locationInput").value.toLowerCase();
-
-    if (!knownLocations[input]) {
-        alert("Location not found.");
-        return;
-    }
-
-    const [lat, lng] = knownLocations[input];
-
-    map.setView([lat, lng], 15);
-
-    const nearest = nearestStore(lat, lng);
-
-    L.marker([nearest.lat, nearest.lng])
-        .addTo(map)
-        .bindPopup(`<b>Nearest Gas Store</b><br>${nearest.title}`)
-        .openPopup();
+  const q = document.getElementById("locationSearch").value.toLowerCase();
+  if (!knownLocations[q]) return;
+  map.setView(knownLocations[q], 15);
 }
 </script>
 

@@ -1,60 +1,38 @@
 [
-    {
-        "title": "Petron Gasul Distributor",
-        "description": "Authorized LPG distributor in the town proper.",
-        "lat": 8.36090,
-        "lng": 124.86420,
-        "img": "",
-        "locationType": "Refill Station"
-    },
-    {
-        "title": "Shell LPG Dealer",
-        "description": "Offers Shellane tanks and refills.",
-        "lat": 8.37010,
-        "lng": 124.87110,
-        "img": "",
-        "locationType": "Dealer"
-    },
-    {
-        "title": "Local LPG Store",
-        "description": "Affordable cooking gas for households.",
-        "lat": 8.35480,
-        "lng": 124.87600,
-        "img": "",
-        "locationType": "Store"
-    },
-    {
-        "title": "Desmark Manolo Fortich - LPG Section",
-        "locationType": "Cooking Gas",
-        "description": "Sells household Petron Gasul cylinders under the Desmark appliance center.",
-        "lat": 8.369782,
-        "lng": 124.864501,
-        "img": ""
-    },
-
-    {
-        "title": "Pryce Gas Manolo Fortich Sales Center",
-        "locationType": "Cooking Gas",
-        "description": "Official Pryce Gas distributor providing LPG refills and replacements.",
-        "lat": 8.363918,
-        "lng": 124.859550,
-        "img": ""
-    },
-    {
-        "title": "Super Gasul / Petron Gasul Dealer",
-        "locationType": "Cooking Gas",
-        "description": "Local dealer selling certified Petron Gasul cylinders.",
-        "lat": 8.372512,
-        "lng": 124.862771,
-        "img": ""
-    },
-    {
-        "title": "Fiesta Gas Dealer - Dalirig",
-        "locationType": "Cooking Gas",
-        "description": "Affordable Fiesta Gas refills and delivery for Dalirig area.",
-        "lat": 8.401221,
-        "lng": 124.851982,
-        "img": ""
-    }
-    
+  {
+"title":"PRYCEGAS",
+"description": "Damilag PryceGas",
+  "lat": 8.3606043,
+  "lng": 124.8122304
+  },
+   {
+"title":"Prycegas Myras Store",
+"description": "Damilag PryceGas",
+  "lat": 8.361967,
+  "lng": 124.8122251
+   },
+      {
+"title":"Prycegas Aldin store",
+"description": "Damilag PryceGas",
+  "lat": 8.3631392,
+  "lng": 124.8122548
+   },
+   {
+    "title":"Prycegas Abas Store",
+   "description": "Libona PryceGas",
+   "lat": 8.323439513743002,
+   "lng": 124.79309835597878
+   },
+{
+    "title":"Prycegas Alae Store",
+   "description": "Alae PryceGas",
+   "lat": 8.420712468030786,
+   "lng": 124.81331325450262
+},
+{
+     "title":"Pryce Gases, Inc. Mambatangan Plant",
+   "description": "Mambatangan PryceGas",
+   "lat": 8.457705046081943,
+   "lng": 124.79356494195058
+}
 ]
