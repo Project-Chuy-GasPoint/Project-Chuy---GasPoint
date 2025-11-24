@@ -23,7 +23,7 @@ const street = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
 const satellite = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", { attribution: "" });
 
 const map = L.map("map", { center: [8.3646, 124.8651], zoom: 13, layers: [street] });
-L.control.layers({ "Street": street, "Satellite": satellite }).addTo(map);
+L.control.layers({ "OpenStreetMap": street, "Satellite": satellite }).addTo(map);
 
 let gasStores = [];
 
@@ -38,25 +38,42 @@ fetch("gaspoint-data.json")
         store.description +
         (store.contact ? "<br><b>Contact:</b> " + store.contact : "");
 
-      
       if (store.image) {
         popupHtml += `<br><img src="${store.image}" width="150">`;
       }
 
       const gasIcon = L.icon({
-  iconUrl: "images/lpg-icon.png",  
-  iconSize: [40, 40],
-  iconAnchor: [20, 40], 
-  popupAnchor: [0, -40] 
-});
+        iconUrl: "images/lpg-icon.png",
+        iconSize: [40, 40],
+        iconAnchor: [20, 40],
+        popupAnchor: [0, -40]
+      });
 
+    
+      const blueIcon = L.icon({
+        iconUrl: "images/blue lpg.png",
+        iconSize: [40, 40],
+        iconAnchor: [20, 40],
+        popupAnchor: [0, -40]
+      });
 
-      L.marker([store.lat, store.lng], { icon: gasIcon }).addTo(map).bindPopup(popupHtml);
+      
+      let title = store.title.toLowerCase();
+      let useIcon = gasIcon;
+
+      if (
+        title.includes("phoenix") ||
+        title.includes("gd lpg") ||
+        title.includes("kris")
+      ) {
+        useIcon = blueIcon;
+      }
+
+      L.marker([store.lat, store.lng], { icon: useIcon }).addTo(map).bindPopup(popupHtml);
 
     });
   });
-
-
+ 
 const knownLocations = {
   "damilag": [8.3503, 124.8121],
   "alae": [8.4208119, 124.8133793],
