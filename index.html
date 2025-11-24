@@ -4,8 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GasPoint - Cooking Gas Locator</title>
+
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<style>
+  
+  #map { width: 100%; 
+  height: 100vh; }
+
+</style>
 </head>
 <body>
 
@@ -20,12 +27,14 @@
 document.getElementById("map").style.height = window.innerHeight + "px";
 
 const street = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { attribution: "" });
+
 const satellite = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", { attribution: "" });
 
 const map = L.map("map", { center: [8.3646, 124.8651], zoom: 13, layers: [street] });
 L.control.layers({ "OpenStreetMap": street, "Satellite": satellite }).addTo(map);
 
 let gasStores = [];
+let markers = []; 
 
 fetch("gaspoint-data.json")
   .then(r => r.json())
@@ -43,13 +52,12 @@ fetch("gaspoint-data.json")
       }
 
       const gasIcon = L.icon({
-        iconUrl: "images/lpg-icon.png",
+        iconUrl: "images/red lpg.png",
         iconSize: [40, 40],
         iconAnchor: [20, 40],
         popupAnchor: [0, -40]
       });
 
-    
       const blueIcon = L.icon({
         iconUrl: "images/blue lpg.png",
         iconSize: [40, 40],
@@ -57,7 +65,6 @@ fetch("gaspoint-data.json")
         popupAnchor: [0, -40]
       });
 
-      
       let title = store.title.toLowerCase();
       let useIcon = gasIcon;
 
@@ -69,11 +76,53 @@ fetch("gaspoint-data.json")
         useIcon = blueIcon;
       }
 
-      L.marker([store.lat, store.lng], { icon: useIcon }).addTo(map).bindPopup(popupHtml);
+      
+      const marker = L.marker([store.lat, store.lng], { icon: useIcon }).bindPopup(popupHtml);
+      marker.type = (useIcon === blueIcon) ? "blue" : "red";
+      marker.addTo(map);
+      markers.push(marker);
 
     });
   });
- 
+
+// Checkbox control for Blue/Red LPG
+const filterControl = L.control({ position: 'topright' });
+filterControl.onAdd = function(map) {
+  const div = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
+  div.style.background = 'white';
+  div.style.padding = '5px';
+  div.style.fontSize = '14px';
+
+  div.innerHTML = `
+    <label><input type="checkbox" id="showBlue" checked> Blue LPG</label><br>
+    <label><input type="checkbox" id="showRed" checked> Red LPG</label>
+  `;
+
+  L.DomEvent.disableClickPropagation(div);
+
+  div.querySelector('#showBlue').addEventListener('change', updateMarkers);
+  div.querySelector('#showRed').addEventListener('change', updateMarkers);
+  return div;
+};
+
+filterControl.addTo(map);
+
+// Function checkbox nisya
+function updateMarkers() {
+  const showBlue = document.getElementById("showBlue").checked;
+  const showRed = document.getElementById("showRed").checked;
+
+  markers.forEach(marker => {
+    const onMap = map.hasLayer(marker);
+    if ((marker.type === "blue" && showBlue) || (marker.type === "red" && showRed)) {
+      if (!onMap) marker.addTo(map);
+    } else {
+      if (onMap) map.removeLayer(marker);
+    }
+  });
+}
+
+
 const knownLocations = {
   "damilag": [8.3503, 124.8121],
   "alae": [8.4208119, 124.8133793],
