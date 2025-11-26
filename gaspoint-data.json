@@ -112,5 +112,13 @@
       "contact": "09177044331",
       "lat": 8.423445208244992,
       "lng": 124.8139231742251
+   },
+   {
+      "title": "APEX SOLANE GAS",
+      "image": "images/Apex.png",
+      "description": "Alae Apex",
+      "contact": "09123456789",
+      "lat": 8.420508010293913,
+      "lng": 124.81836582983917
    }
 ]
