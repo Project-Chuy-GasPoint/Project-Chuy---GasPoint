@@ -34,3 +34,36 @@ body {
     background: #f7f9ff;
     border-bottom: 2px solid #dce4ff;
 }
+
+.search-box input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #b7c5ff;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    background: #296cff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Map */
+#map {
+    width: 100%;
+    height: 600px;
+}
+
+/* Filter box (Blue / Red LPG) */
+.filter-box {
+    background: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+}
+
