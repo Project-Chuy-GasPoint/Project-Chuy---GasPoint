@@ -23,6 +23,8 @@
 
 <div id="map"></div>
 
+</div>
+
 <script>
 document.getElementById("map").style.height = window.innerHeight + "px";
 
@@ -89,11 +91,13 @@ fetch("gaspoint-data.json")
 
 // Checkbox control for Blue/Red LPG
 const filterControl = L.control({ position: 'topright' });
+
 filterControl.onAdd = function(map) {
-  const div = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
-  div.style.background = 'white';
-  div.style.padding = '5px';
-  div.style.fontSize = '14px';
+  const div = L.DomUtil.create('div', 'filter-box');
+  div.innerHTML = `
+    <label><input type="checkbox" id="showBlue" checked> Blue LPG</label><br>
+    <label><input type="checkbox" id="showRed" checked> Red LPG</label>
+  `;
 
   div.innerHTML = `
     <label><input type="checkbox" id="showBlue" checked> Blue LPG</label><br>
