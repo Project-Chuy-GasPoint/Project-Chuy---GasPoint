@@ -136,5 +136,14 @@
       "contact": "09123456789",
       "lat": 8.323444526360753,
       "lng": 124.80920005264566
+   },
+   {
+   "title": "eagles shop reseller LPG",
+      "image": "images/pryce agusan.png",
+      "description": "Reseller",
+      "contact": "09123456789",
+      "lat": 8.321744992125463,
+      "lng": 124.80896139734783
  }
+ 
 ]
