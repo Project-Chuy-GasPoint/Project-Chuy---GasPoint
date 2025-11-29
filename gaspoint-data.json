@@ -152,6 +152,21 @@
       "contact": "09123456789",
       "lat": 8.324457800900673, 
       "lng": 124.81079422401783
+ },
+ {
+  "title": "MEMEN'S STORE",
+      "image": "images/men.png",
+      "description": "Reseller",
+      "contact": "09123456789",
+      "lat": 8.324457800900673, 
+      "lng": 124.81079422401783
+ },
+ {
+   "title": "Yayabs Store",
+      "image": "images/yabs.png",
+      "description": "Reseller",
+      "contact": "09123456789",
+      "lat": 8.324458464388652, 
+      "lng": 124.81100209521082
  }
- 
 ]
