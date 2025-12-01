@@ -28,8 +28,10 @@
   transition: 0.3s ease;
 }
 .nav-links button:hover {
-  background: #ffcc99;
-  color: rgb(116, 9, 9);
+  background: linear-gradient(135deg, #1f6feb, #2260b8);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 #map {
