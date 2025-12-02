@@ -220,6 +220,10 @@ const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${a
             <p><b>Humidity:</b> ${data.main.humidity}%</p>
             <p><b>Wind Speed:</b> ${data.wind.speed} m/s</p>
         `;
+        } catch (error) {
+        alert("Error: " + error.message);
+        console.log("Error: " + error.message);
+    }
 }
 
 </script>
