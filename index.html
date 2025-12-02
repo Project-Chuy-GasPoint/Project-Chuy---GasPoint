@@ -25,7 +25,10 @@ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""><
 <body>
 
 <header class="main-header">
-  <div class="logo">Project Chuy: GasPoint</div>
+  <div class="logo">
+    <img src="images\logo-gaspoint.png" alt="Logo" style="height:40px; width:auto; margin-right:10px;">
+    Project Chuy: GasPoint
+  </div>
   <nav class="nav-links">
     <button onclick="goHome()">Home</button>
     <button onclick="goShops()">Shops</button>
@@ -195,7 +198,6 @@ async function getWeather() {
         console.log("No city entered. " + Date());
         return;
 
-        
 }
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
