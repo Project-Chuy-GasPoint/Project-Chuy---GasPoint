@@ -197,9 +197,14 @@ async function getWeather() {
     const city = prompt("Enter a city name (Example: Manolo Fortich)");
     console.log("Prompt closed. " + Date());
 
+    if (!city) {
+        alert("No city entered.");
+        console.log("No city entered. " + Date());
+        return;
+
 
 }
-
+}
 
 </script>
 
