@@ -26,7 +26,7 @@ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""><
 
 <header class="main-header">
   <div class="logo">
-    <img src="images\gaspoint-logo.png" alt="Logo" style="height:40px; width:auto; margin-right:10px;">
+    <img src="images/gaspoint-logo.png" alt="Logo" class="logo-img">
     Project Chuy: GasPoint
   </div>
   <nav class="nav-links">
@@ -35,22 +35,23 @@ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""><
   </nav>
 </header>
 
+
 <div class="container-fluid mt-3">
   <div class="row">
 
   <!-- Sidebar -->
     <div class="col-md-3">
 
-  <!-- Weather card -->
   <div class="weather-box mb-3">
-    <div class="card">
-      <div class="card-header text-white">Current Weather</div>
-      <div class="card-body">
-        <button class="btn w-100 mb-2" onclick="getWeather()">Check Weather</button>
-        <div id="weatherResult" style="font-size: 14px;"></div>
-      </div>
+  <div class="card">
+    <div class="card-header text-white">Current Weather</div>
+    <div class="card-body">
+      <button class="btn w-100 mb-2" onclick="getWeather()">Check Weather</button>
+      <div id="weatherResult" class="weather-result"></div>
     </div>
   </div>
+</div>
+
 
   <!-- LPG Shops List -->
   <div class="card mb-3">
